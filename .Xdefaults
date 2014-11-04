@@ -1,0 +1,49 @@
+!!$HOME/.Xdefaults
+URxvt.preeditType:Root
+!URxvt.inputMethod:ibus
+!!颜色设置
+URxvt.depth:32
+URxvt.background: rgba:0000/0000/0200/c800
+URxvt.foreground:  #ffffff
+URxvt.colorBD:Gray95
+URxvt.colorUL:Green
+URxvt.color1:Red2
+URxvt.color4:RoyalBlue
+URxvt.color5:Magenta2
+URxvt.color8:Gray50
+URxvt.color10:Green2
+URxvt.color12:Green2
+URxvt.color12:DodgerBlue
+URxvt.color14:Cyan2
+URxvt.color15:Gray95
+!!URL操作
+URxvt.urlLauncher:firefox-bin
+URxvt.matcher.button:1
+Urxvt.perl-ext-common:matcher
+!!滚动条设置
+URxvt.scrollBar:True
+URxvt.scrollBar_right:True
+URxvt.scrollBar_floating:False
+URxvt.scrollstyle:plain
+!!滚屏设置
+URxvt.mouseWheelScrollPage:True
+URxvt.scrollTtyOutput: False
+URxvt.scrollWithBuffer: True
+URxvt.scrollTtyKeypress: True
+!!光标闪烁
+!URxvt.cursorBlink:True
+URxvt.saveLines:9000
+!!边框
+URxvt.borderLess:      False
+!!字体设置
+Xft.dpi:96
+URxvt.font:xft:Droid Sans Mono:size=3:style=Regular:antialias=true,xft:文泉驿等宽正黑:size=4:style=Regular:antialias=true
+URxvt.boldfont:xft:Droid Sans Mono:size=3:style=BOld:antialias=true,xft:文泉驿等宽正黑:size=4:style=Bold:antialias=true
+
+URxvt.vt100.translations: #override \
+      Shift <KeyPress> Up:     scroll-back(1, line) \n\
+	  Shift <KeyPress> Down:    scroll-forw(1, line) \n\
+	  Shift <KeyPress> Insert:  string(0x1b) string(0x5b) string(2;2~) \n\
+	  Ctrl Shift <KeyPress> C:  select-end(PRIMARY,CLIPBOARD,CUT_BUFFER0) \n\
+	  Ctrl Shift <KeyPress> V:  insert-selection(CLIPBOARD, CUT_BUFFER0, PRIMARY)\n\
+      Shift <Btn1Up>: exec-formatted("firefox-bin '%t'", PRIMARY)

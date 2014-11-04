@@ -1,0 +1,107 @@
+!xterm
+!~/.Xresources
+!!英文用系统默认字体，中文用文泉驿正黑，这个配置适合笔记本，屏幕分辨率是1280X800。
+
+!xrdb ~/.Xresources
+!xterm -en GBK:use GBK
+
+!!look and feel
+xterm*termName: xterm-256color
+xterm*scrollBar: false
+xterm*rightScrollBar: true
+xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
+xterm*loginshell: true
+xterm*cursorBlink: false
+xterm*saveLines:  2000
+xterm*background:[40]black
+xterm*foreground: lightgray
+XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+!
+!!font and locale
+xterm*locale: true
+xerm.utf8:     true
+xterm*utf8Title: true
+xterm*fontMenu*fontdefault*Label: Default
+xterm*faceName:Monospace:antialias=True:pixelsize=15
+xterm*boldFont:WenQuanYi Micro Hei Mono:style=Bold:pixelsize=15
+xterm*faceNameDoublesize:WenQuanYi Micro Hei:antialias=True:pixelsize=15
+!xterm*xftAntialias: true
+xterm.cjkWidth:true
+!XTerm*preeditType: Root 
+!xterm*VT100*colorULMode:on 
+!xterm*VT100*underLine:on 
+!xterm*VT100*colorUL:red
+!xterm*VT100*font: -misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1
+XTerm*vt100.translations: #override \
+      Shift <KeyPress> Up:     scroll-back(1, line) \n\
+	  Shift <KeyPress> Down:    scroll-forw(1, line) \n\
+	  Shift <KeyPress> Insert:  string(0x1b) string(0x5b) string(2;2~) \n\
+	  Ctrl Shift <KeyPress> C:  select-end(PRIMARY,CLIPBOARD,CUT_BUFFER0) \n\
+	  Ctrl Shift <KeyPress> V:  insert-selection(CLIPBOARD, CUT_BUFFER0, PRIMARY)\n\
+      Shift <Btn1Up>: exec-formatted("firefox-bin '%t'", PRIMARY)
+
+!urxvt
+Xft.dpi:96
+URxvt.utf8:true
+URxvt.utf8Title: true
+URxvt.geometry:80x24
+URxvt.background:[70]black
+URxvt.foreground:lightgray
+URxvt.loginshell: true
+!URxvt.colorBD:yellow
+!URxvt.colorUL:green
+!URxvt.color0:black
+!URxvt.color1:red3
+!URxvt.color2:springgreen
+!URxvt.color3:wheat3
+!URxvt.color4:navy
+!URxvt.color5:magenta4
+!URxvt.color6:steelblue1
+!URxvt.color7:gray85
+!URxvt.color8:gray10
+!URxvt.color9:orangered2
+!URxvt.color10:chartreuse3
+!URxvt.color11:lightgoldenrod2
+!URxvt.color12:skyblue1
+!URxvt.color13:pink1
+!URxvt.color14:lightblue1
+URxvt.scrollBar:False
+URxvt.scrollstyle:next
+URxvt.saveLines:10000
+!URxvt.font:WenQuanYi Micro Hei Mono:Bold:pixelsize=15
+URxvt.prmeditType:Root
+URxvt.font:xft:WenQuanYi Micro Hei Mono:size=12:style=Regular:antialias=true,xft:WenQuanYi Micro Hei Mono:size=12:style=Regular:antialias=true
+URxvt.boldfont:xft:WenQuanYi Micro Hei Mono:size=12:style=Bold:antialias=true,xft:WenQuanYi Micro Hei Mono:size=12:style=Bold:antialias=true
+URxvt.depth:32
+!fake transparent
+URxvt.inheritPixmap:true
+URxvt.tintColor:lightgray
+URxvt.shading:30
+!URxvt.transparent: True
+!URxvt.transpscrollbar: True
+!URxvt.background:rgba:0000/0000/0000/dddd
+!
+!!aterm
+!! Begin ports/chinese/aterm configuration
+!aterm.borderColor:              black
+!aterm.background:               black
+!aterm.backspacekey:             "^H"
+!aterm.cursorColor:              IndianRed
+!aterm.foreground:               gray98
+!aterm.geometry:                 80x24
+!aterm.inputMethod:              xcin
+!aterm.multichar_encoding:       big5
+!aterm.preeditType:              OverTheSpot
+!aterm.scrollTtyKeypress:        True
+!aterm.scrollTtyOutput:          False
+!aterm.scrollBar_right:          True
+!aterm.shading:                  30
+!aterm.termName:                 xterm-color
+!aterm.transparent: True
+!aterm.transpscrollbar: True
+!aterm.troughColor:              black
+!! !您可選擇想要的字體大小
+!! ! 國喬 16pt, 國喬 16pt
+!aterm.font:                     8x16
+!aterm.mfont:                    kc15f
+!! ! End ports/chinese/aterm configuartion

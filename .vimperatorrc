@@ -1,0 +1,9 @@
+nnoremap j 5j
+nnoremap k 5k
+
+nnoremap ;e :js __readable_by_evernote.button__call(events) <CR>
+
+"set hintchars=hjklasdfg
+
+set nextpattern=下一,后一,下页,后页,\bnext,(>|›|>>|››|»)$,更多,\bmore\b  
+set previouspattern=上一,前一,上页,前页,\b(prev|previous)\b,^(<|‹|<<|‹‹|«)
