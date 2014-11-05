@@ -1,7 +1,7 @@
 # Create link to backfiles
 
 #!/bin/bash
-linkfiles=$(ls -A|grep -v "creat")
+linkfiles=$(ls -A|egrep "^\.[^g]")
 echo $linkfiles
 
 for f in ${linkfiles}
