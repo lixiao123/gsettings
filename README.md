@@ -12,3 +12,4 @@ This is a backup for system global config files
 * .Xdefaults
 * .xinitrc
 * .Xresources
+* .bashrc
