@@ -14,6 +14,15 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
+#get cpuinfo to chose scrit
+CPUINFO=`cat /proc/cpuinfo |egrep -e "T2400"`
+
+if [ -n "$CPUINFO" ]; then
+#commands for T2400 only(Netbooks)
+else
+#commands for T4200 only
+fi
+
 
 # Put your fun stuff here.
 alias ll='ls -Al'
@@ -31,7 +40,11 @@ complete -cf sudo
 complete -cf man
 
 #add use PATH
-export PATH="$PATH":~/bin:~/android/android-tools/platform-tools
+export PATH="$PATH":~/bin
+#for android kernel complier
+export PATH="$PATH":~/cm7-coder/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin
+#for android adb tools
+export PATH="$PATH":~/android/android-tools/platform-tools/
 
 #set for awesome EDITOR
 export EDITOR=vim
