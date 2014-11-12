@@ -9,6 +9,16 @@ map -count -modes=n,v k -builtin <count>7k
 "quick switch evernote_clearly
 map -count -modes=n,v ;e -builtin <count>:js<Space>__readable_by_evernote.button__call(events)<Return>
 
+"swap f F
+nmap -builtin f F
+nmap -builtin F f
+
+"qmark
+qmark q www.quora.com
+qmark g ipv6.google.com
+qmark b www.baidu.com
+qmark z www.zhihu.com
+
 "set search fealures
 set defsearch=google
 map -count -modes=n,v s -builtin <count>S
@@ -29,10 +39,5 @@ hi Filter						  -a font-weight: bold; color: #00bfff !important;
 hi 'CompItem[selected] Filter'	  -a color: #00468f !important;
 hi 'CompItem[selected] Object'    -a color: #00468f !important; 
 
-"qmark
-qmark b http://www.baidu.com
-qmark g http://ipv6.google.com
-qmark q http://quora.com
-qmark z http://zhihu.com
 
 " vim: set ft=pentadactyl:
